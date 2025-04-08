@@ -9,6 +9,7 @@
     "clean": "lerna clean && rm -rf node_modules",
     "test": "lerna run test",
     "publish": "lerna publish",
+    "deploy": "bash deploy.sh",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
