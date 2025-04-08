@@ -1,0 +1,29 @@
+{
+  "name": "ise-fe-spec",
+  "private": true,
+  "description": "ISE--前端编码规范工程化",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky install",
+    "init": "pnpm install",
+    "clean": "lerna clean && rm -rf node_modules",
+    "test": "lerna run test",
+    "publish": "lerna publish",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lerna": "^8.2.1",
+    "pnpm": "^10.8.0",
+    "vitepress": "^1.6.3"
+  },
+  "author": {
+    "name": "MJ",
+    "email": "boss_think@163.com",
+    "url": "https://github.com/ise-coder/ise-fe-spec"
+  },
+  "keywords": ["ise", "fe spec"],
+  "license": "ISC"
+}
