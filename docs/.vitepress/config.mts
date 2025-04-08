@@ -4,6 +4,8 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "ISE 前端编码规范工程化",
   description: "ISE 前端编码规范工程化",
+  base: "/ise-fe-spec/",
+  head: [["link", { rel: "icon", href: "/ise-fe-spec/favicon.ico" }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: "/img/ise-logo.svg",
