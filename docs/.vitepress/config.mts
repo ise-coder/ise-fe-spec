@@ -25,8 +25,9 @@ export default defineConfig({
         {
           text: "工程规范",
           items: [
-            { text: "GIT规范", link: "/engineering/git" },
+            { text: "GIT 规范", link: "/engineering/git" },
             { text: "文档规范", link: "/engineering/doc" },
+            { text: "CHANGELOG 规范", link: "/engineering/changelog" },
           ],
         },
       ],
