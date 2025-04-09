@@ -1,0 +1,27 @@
+{
+  "name": "ise-fe-markdownlint-config",
+  "version": "0.0.0",
+  "description": "ISE 文档规范",
+  "keywords": [
+    "ise",
+    "markdown",
+    "lint"
+  ],
+  "author": "mj <boss_think@163.com>",
+  "homepage": "https://github.com/ise-coder/ise-fe-spec#readme",
+  "license": "ISC",
+  "main": "index.json",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ise-coder/ise-fe-spec.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ise-coder/ise-fe-spec/issues"
+  },
+  "peerDependencies": {
+    "markdownlint": "^0.37.4"
+  }
+}

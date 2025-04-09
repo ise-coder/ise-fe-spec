@@ -47,9 +47,9 @@ pnpm run changelog
 - [Lerna](https://lerna.js.org/)
 - [pnpm](https://pnpm.io/)
 - [markdownlint](https://github.com/DavidAnson/markdownlint)
-  - 所有规则：https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+  - 所有规则：<https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md>
 - [commitlint](https://commitlint.js.org/)
-  - 所有规则：https://commitlint.js.org/reference/rules.html
+  - 所有规则：<https://commitlint.js.org/reference/rules.html>
 - [VitePress](https://vitepress.dev/)
 
 ## :email: 联系

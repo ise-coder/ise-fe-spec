@@ -12,11 +12,14 @@
     "deploy": "bash deploy.sh",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "lint": "markdownlint -c .markdownlint.json README.md **/*.md"
   },
   "devDependencies": {
     "husky": "^9.1.7",
     "lerna": "^8.2.1",
+    "markdownlint": "^0.37.4",
+    "markdownlint-cli": "^0.44.0",
     "pnpm": "^10.8.0",
     "vitepress": "^1.6.3"
   },
@@ -25,6 +28,9 @@
     "email": "boss_think@163.com",
     "url": "https://github.com/ise-coder/ise-fe-spec"
   },
-  "keywords": ["ise", "fe spec"],
+  "keywords": [
+    "ise",
+    "fe spec"
+  ],
   "license": "ISC"
 }
