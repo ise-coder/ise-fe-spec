@@ -12,7 +12,7 @@ hero:
       link: /coding/html
     - theme: gongch
       text: 工程规范
-      link: /api-examples
+      link: /engineering/git
 
 features:
   - title: 全面的前端生态
