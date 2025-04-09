@@ -6,7 +6,7 @@
 需要先行安装 [markdownlint](https://www.npmjs.com/package/markdownlint)：
 
 ```bash
-npm install ise-fe-markdownlint-config markdownlint --save-dev
+npm install ise-fe-markdownlint-config markdownlint markdownlint-cli --save-dev
 ```
 
 ## 使用
