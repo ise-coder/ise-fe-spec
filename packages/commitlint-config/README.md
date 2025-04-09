@@ -33,11 +33,13 @@ npm install husky --save-dev
 ```
 
 初始化 husky
+
 ``` bash
 npx husky init
 ```
 
 在 commit-msg 中增加下面的内容
+
 ``` bash
 echo "npx --no -- commitlint --edit \$1" > .husky/commit-msg
 ```

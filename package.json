@@ -13,7 +13,8 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "lint": "markdownlint -c .markdownlint.json README.md **/*.md"
+    "lint": "markdownlint -c .markdownlint.json README.md '**/*.md'",
+    "lint:fix": "markdownlint -f -c .markdownlint.json README.md '**/*.md'"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",

@@ -16,7 +16,7 @@ layout: doc
 
 ### 1.2. 基本的 `message` 格式
 
-```
+``` bash
 <type>[optional scope]: <subject>
 
 [optional body]
@@ -28,14 +28,14 @@ layout: doc
 
 #### 1.2.1. 字数限制
 
-* header（首行）：只有一行，不超过 50 个字符
-* body：每行不超过 72 个字符
-* footer：每行不超过 72 个字符
+- header（首行）：只有一行，不超过 50 个字符
+- body：每行不超过 72 个字符
+- footer：每行不超过 72 个字符
 
 > 为什么要有字数限制？
 >
-> * header： 像 Linux、Git 这样的开源项目，是以邮件列表作为代码评审的平台，header 要作为邮件的标题，而邮件标题本身就有长度的限制，并且标题太长也不利于浏览和信息获取。
-> * body 和 footer：源于大部分编程语言的编码规范，最初源于打字机宽度等物理设备的限制，后来慢慢成为默认遵守的规范。
+> - header： 像 Linux、Git 这样的开源项目，是以邮件列表作为代码评审的平台，header 要作为邮件的标题，而邮件标题本身就有长度的限制，并且标题太长也不利于浏览和信息获取。
+> - body 和 footer：源于大部分编程语言的编码规范，最初源于打字机宽度等物理设备的限制，后来慢慢成为默认遵守的规范。
 
 #### 1.2.2. 语言选择
 
@@ -55,14 +55,14 @@ layout: doc
 
 `type` 用来描述本次提交的改动类型，可选值及对应含义如下：
 
-* `feat`: 新增功能
-* `fix`: 修复 bug
-* `docs`: 文档相关的改动
-* `style`: 对代码的格式化改动，代码逻辑并未产生任何变化(例如代码缩进，分号的移除和添加)
-* `test`: 新增或修改测试用例
-* `refactor`: 重构代码或其他优化举措
-* `chore`: 项目工程方面的改动，代码逻辑并未产生任何变化
-* `revert`: 恢复之前的提交
+- `feat`: 新增功能
+- `fix`: 修复 bug
+- `docs`: 文档相关的改动
+- `style`: 对代码的格式化改动，代码逻辑并未产生任何变化(例如代码缩进，分号的移除和添加)
+- `test`: 新增或修改测试用例
+- `refactor`: 重构代码或其他优化举措
+- `chore`: 项目工程方面的改动，代码逻辑并未产生任何变化
+- `revert`: 恢复之前的提交
 
 > 注意：
 >
@@ -77,7 +77,7 @@ layout: doc
 
 如果是 `monorepo` 的项目，`scope` 取值可以是 `subpackage` 的名称。例如 `babel` 项目中对某个 `package` 的修改：
 
-```
+``` bash
 chore(babel-helper-plugin-utils): add npmignore
 ```
 
@@ -85,35 +85,35 @@ chore(babel-helper-plugin-utils): add npmignore
 
 subject 用来概括和描述本次提交的改动内容，需注意以下几点：
 
-1. 时态方面使用一般现在时，不要使用过去时。虽然查看 `message` 时，`message` 内容本身都发生在过去，然而对于主题来说，使用现在时的时态更简洁明确，并且更易达成一致性：
+- 时态方面使用一般现在时，不要使用过去时。虽然查看 `message` 时，`message` 内容本身都发生在过去，然而对于主题来说，使用现在时的时态更简洁明确，并且更易达成一致性：
 
-    ```
-    // good
-    docs: delete redundant docs
+``` bash
+// good
+docs: delete redundant docs
 
-    // bad
-    docs: deleted redundant docs
-    ```
+// bad
+docs: deleted redundant docs
+```
 
-2. 句式使用祈使句。即一般情况不要增加主语。因为在绝大情况下，主语都是作者『我』：
+- 句式使用祈使句。即一般情况不要增加主语。因为在绝大情况下，主语都是作者『我』：
 
-    ```
-    // good
-    docs: delete redundant docs
+``` bash
+// good
+docs: delete redundant docs
 
-    // bad
-    docs: i delete redundant docs
-    ```
+// bad
+docs: i delete redundant docs
+```
 
-3. 句首无需大写，句尾无需结束标点。因为主题（或标题）本身不用形成完整的句子：
+- 句首无需大写，句尾无需结束标点。因为主题（或标题）本身不用形成完整的句子：
 
-  ```
-    // good
-    docs: delete redundant docs
+``` bash
+// good
+docs: delete redundant docs
 
-    // bad
-    docs: Delete redundant docs.
-    ```
+// bad
+docs: Delete redundant docs.
+```
 
 ### 1.4. message body
 
@@ -158,13 +158,13 @@ resolved
 
 关键字的选用可以根据当前语义、关联的 `Issue` 是否在当前仓库下，甚至是 commit 消息的长度限制来决定。
 
-* `close`: 关闭当前仓库的 `Issue`
-* `fix`: 关闭当前或其他仓库的 `Issue`, 一般指 Bug 修复
-* `resolve`: 关闭当前或其他仓库的 `Issue`
+- `close`: 关闭当前仓库的 `Issue`
+- `fix`: 关闭当前或其他仓库的 `Issue`, 一般指 Bug 修复
+- `resolve`: 关闭当前或其他仓库的 `Issue`
 
 关闭多个 `Issues` 使用如下格式:
 
-```
+``` bash
 Close #1, #2, #3
 Close #1, close #2, close #3
 
@@ -179,7 +179,7 @@ Resolve #1, close #2, close #3
 
 如果本次提交的改动是破坏性的，需要在这里声明：
 
-```
+``` bash
 BREAKING CHANGE: 为了组件 API 规范的统一，本次升级将 size 属性的 value 值从 `s|m|l` 替换为 `small|medium|large`。
 
 请按照如下方式升级：
@@ -195,20 +195,20 @@ BREAKING CHANGE: 为了组件 API 规范的统一，本次升级将 size 属性�
 
 ### 2.1. 分支模型选择的说明
 
-目前互联网和社区中流传最广泛的一个分支模型 [Git Flow](https://github.com/nvie/gitflow) 出自 [a-successful-git-branching-model](https://nvie.com/posts/a-successful-git-branching-model/) 这篇十年前的文章，文章作者 Vincent Driessen 在 2020 年三月份的时候已经公开表示，该分支模型已经不适用于现如今持续交付的软件工程方式，推荐在持续交付的软件工程中使用更简单的 [Github Flow](https://guides.github.com/introduction/flow/) 模型。
+目前互联网和社区中流传最广泛的一个分支模型 [Git Flow](https://github.com/nvie/gitflow) 出自 [a-successful-git-branching-model](https://nvie.com/posts/a-successful-git-branching-model/) 这篇十年前的文章，文章作者 Vincent Driessen 在 2020 年三月份的时候已经公开表示，该分支模型已经不适用于现如今持续交付的软件工程方式，推荐在持续交付的软件工程中使用更简单的 [GitHub Flow](https://guides.github.com/introduction/flow/) 模型。
 
 ### 2.2. 分支命名
 
 新建分支的命名格式为：`{type}-{issue id}-the-thing-you-do`
 
-* `type`：和上文 1.3.1 章节中的 type 保持一致
-* `issue id`：与分支内容相关的 issue id，如果无关，则可以忽略
+- `type`：和上文 1.3.1 章节中的 type 保持一致
+- `issue id`：与分支内容相关的 issue id，如果无关，则可以忽略
 
 比如以下格式都满足规范：
 
-* `feat-ssr-prefetch`：新增 ssr prefetch 功能
-* `fix-1379-component-insert-order`：修复 issue 1379 中提到的组件插入顺序 bug
-* `revert-14218-memory-leak-on-unmount`：回退版本解决 issue 14218 提到的组件卸载时内存泄露的问题
+- `feat-ssr-prefetch`：新增 ssr prefetch 功能
+- `fix-1379-component-insert-order`：修复 issue 1379 中提到的组件插入顺序 bug
+- `revert-14218-memory-leak-on-unmount`：回退版本解决 issue 14218 提到的组件卸载时内存泄露的问题
 
 > 注：该命名规约只针对新建的临时分支，不包括如 master、develop 等常驻分支
 
@@ -216,8 +216,8 @@ BREAKING CHANGE: 为了组件 API 规范的统一，本次升级将 size 属性�
 
 在需要同时维护多个版本的项目中，只使用 master 作为主干分支显然是无法满足需求的，但是又不想使用 Git Flow 这种复杂、繁琐的分支结构，那么就可以每发布一个新的版本就单独拉一个新的分支，例如：
 
-> * `1.0.0-stable`
-> * `2.0.0-stable`
+> - `1.0.0-stable`
+> - `2.0.0-stable`
 
 其他开发过程中的分支命名参考上节 2.2 的分支命名规约。
 
@@ -230,7 +230,6 @@ BREAKING CHANGE: 为了组件 API 规范的统一，本次升级将 size 属性�
 相比于使用例如 `git tag v1.2.3` 这种「轻量标签」，更推荐使用如下命令生成「附注标签」：
 
 `git tag -a v1.2.3 -m "发布经销商管理模块"`
-
 
 ## 参考资料
 

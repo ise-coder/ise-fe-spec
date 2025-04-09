@@ -14,8 +14,10 @@
   "proper-names": {
     "names": [
       "JavaScript",
+      "javascript",
       "HTML",
       "CSS",
+      "css",
       "AJAX",
       "JSON",
       "DOM",
