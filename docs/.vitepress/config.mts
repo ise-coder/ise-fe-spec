@@ -21,10 +21,13 @@ export default defineConfig({
           items: [{ text: "HTML编码规范", link: "/coding/html" }],
         },
       ],
-      "/engineering/git": [
+      "/engineering/": [
         {
           text: "工程规范",
-          items: [{ text: "GIT规范", link: "/engineering/git" }],
+          items: [
+            { text: "GIT规范", link: "/engineering/git" },
+            { text: "文档规范", link: "/engineering/doc" },
+          ],
         },
       ],
     },
