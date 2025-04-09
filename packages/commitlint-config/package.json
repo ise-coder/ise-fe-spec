@@ -1,0 +1,27 @@
+{
+  "name": "ise-fe-commitlint-config",
+  "version": "0.1.0",
+  "description": "ISE Git规范",
+  "keywords": [
+    "ise",
+    "commit",
+    "lint"
+  ],
+  "author": "mj <boss_think@163.com>",
+  "homepage": "https://github.com/ise-coder/ise-fe-spec#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ise-coder/ise-fe-spec.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ise-coder/ise-fe-spec/issues"
+  },
+  "peerDependencies": {
+    "conventional-changelog-conventionalcommits": "^8.0.0"
+  }
+}
