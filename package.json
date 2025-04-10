@@ -13,8 +13,9 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "lint": "markdownlint -c .markdownlint.json README.md '**/*.md'",
-    "lint:fix": "markdownlint -f -c .markdownlint.json README.md '**/*.md'",
+    "markdownlint": "markdownlint -c .markdownlint.json README.md '**/*.md'",
+    "markdownlint:fix": "markdownlint -f -c .markdownlint.json README.md '**/*.md'",
+    "eslint": "eslint packages/**/*.js",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "devDependencies": {
@@ -25,6 +26,7 @@
     "markdownlint": "^0.37.4",
     "markdownlint-cli": "^0.44.0",
     "pnpm": "^10.8.0",
+    "prettier": "^3.5.3",
     "vitepress": "^1.6.3"
   },
   "author": {
