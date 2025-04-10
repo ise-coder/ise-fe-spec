@@ -1,0 +1,37 @@
+{
+  "name": "ise-fe-stylelint-config",
+  "version": "0.3.0",
+  "description": "ISE CSS规范",
+  "keywords": [
+    "ise",
+    "style",
+    "lint"
+  ],
+  "author": "mj <boss_think@163.com>",
+  "homepage": "https://github.com/ise-coder/ise-fe-spec#readme",
+  "license": "ISC",
+  "main": "index.json",
+  "scripts": {
+    "test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" jest"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ise-coder/ise-fe-spec.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ise-coder/ise-fe-spec/issues"
+  },
+  "peerDependencies": {
+    "stylelint": ">=15.11.0",
+    "stylelint-scss": ">=2.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "postcss-scss": "^4.0.9",
+    "stylelint": "^15.11.0",
+    "stylelint-scss": "^4.1.0"
+  }
+}
