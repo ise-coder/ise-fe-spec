@@ -1,48 +1,47 @@
-import { defineConfig } from "vitepress";
+import { defineConfig } from 'vitepress';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "ISE 前端编码规范工程化",
-  description: "ISE 前端编码规范工程化",
-  base: "/ise-fe-spec/",
-  head: [["link", { rel: "icon", href: "/ise-fe-spec/favicon.ico" }]],
+  title: 'ISE 前端编码规范工程化',
+  description: 'ISE 前端编码规范工程化',
+  base: '/ise-fe-spec/',
+  head: [['link', { rel: 'icon', href: '/ise-fe-spec/favicon.ico' }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: "/img/ise-logo.svg",
+    logo: '/img/ise-logo.svg',
     nav: [
-      { text: "首页", link: "/" },
-      { text: "编码规范", link: "/coding/html" },
-      { text: "工程规范", link: "/engineering/git" },
+      { text: '首页', link: '/' },
+      { text: '编码规范', link: '/coding/html' },
+      { text: '工程规范', link: '/engineering/git' },
     ],
     sidebar: {
-      "/coding/": [
+      '/coding/': [
         {
-          text: "编码规范",
+          text: '编码规范',
           items: [
-            { text: "HTML 编码规范", link: "/coding/html" },
-            { text: "CSS 编码规范", link: "/coding/css" },
+            { text: 'HTML 编码规范', link: '/coding/html' },
+            { text: 'CSS 编码规范', link: '/coding/css' },
+            { text: 'JavaScript 编码规范', link: '/coding/javascript' },
           ],
         },
       ],
-      "/engineering/": [
+      '/engineering/': [
         {
-          text: "工程规范",
+          text: '工程规范',
           items: [
-            { text: "GIT 规范", link: "/engineering/git" },
-            { text: "文档规范", link: "/engineering/doc" },
-            { text: "CHANGELOG 规范", link: "/engineering/changelog" },
+            { text: 'GIT 规范', link: '/engineering/git' },
+            { text: '文档规范', link: '/engineering/doc' },
+            { text: 'CHANGELOG 规范', link: '/engineering/changelog' },
           ],
         },
       ],
     },
 
-    socialLinks: [
-      { icon: "github", link: "https://github.com/ise-coder/ise-spec  " },
-    ],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/ise-coder/ise-spec  ' }],
 
     footer: {
-      message: "Released under the MIT License.",
-      copyright: "Copyright © 2025-present MJ",
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2025-present MJ',
     },
   },
 });
