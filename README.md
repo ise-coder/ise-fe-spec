@@ -54,6 +54,6 @@ pnpm run changelog
 
 ## :email: 联系
 
-- **GitHub**: <https://github.com/ise-coder/ise-spec>
+- **GitHub**: <https://github.com/ise-coder/ise-fe-spec>
 
 </br>
