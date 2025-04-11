@@ -45,6 +45,7 @@ export default defineConfig({
             { text: 'ise-fe-markdownlint-config', link: '/npm/markdownlint' },
             { text: 'ise-fe-commitlint-config', link: '/npm/commitlint' },
             { text: 'ise-fe-stylelint-config', link: '/npm/stylelint' },
+            { text: 'ise-fe-eslint-config', link: '/npm/eslint' },
           ],
         },
       ],
