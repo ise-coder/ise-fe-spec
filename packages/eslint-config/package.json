@@ -1,6 +1,6 @@
 {
   "name": "ise-fe-eslint-config",
-  "version": "1.0.0",
+  "version": "0.4.0",
   "description": "ISE JavaScript TypeScript Node.js 规范",
   "keywords": [
     "ise",
