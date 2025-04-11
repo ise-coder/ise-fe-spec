@@ -15,7 +15,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint ./",
-    "print-config": "eslint --print-config ./index.js > ./print-config.json"
+    "print-config": "eslint --print-config ./index.js > ./print-config.json",
+    "test": "mocha ./__tests__/*.test.js --timeout 5000"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.com/"
@@ -44,6 +45,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-vue": "^7.3.0",
     "lodash": "^4.17.21",
-    "typescript": "^4.1.2"
+    "typescript": "^4.1.2",
+    "mocha": "^8.2.1"
   }
 }
