@@ -11,7 +11,7 @@
   ],
   "author": "mj <boss_think@163.com>",
   "homepage": "https://github.com/ise-coder/ise-fe-spec#readme",
-  "license": "ISC",
+  "license": "MIT",
   "main": "index.js",
   "scripts": {
     "lint": "eslint ./",

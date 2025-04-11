@@ -9,7 +9,7 @@
   ],
   "author": "mj <boss_think@163.com>",
   "homepage": "https://github.com/ise-coder/ise-fe-spec#readme",
-  "license": "ISC",
+  "license": "MIT",
   "main": "index.json",
   "scripts": {
     "test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" jest"
