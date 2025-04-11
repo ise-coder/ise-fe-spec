@@ -41,7 +41,10 @@ export default defineConfig({
       '/npm/': [
         {
           text: 'NPM包',
-          items: [{ text: 'ise-fe-markdownlint-config', link: '/npm/markdownlint' }],
+          items: [
+            { text: 'ise-fe-markdownlint-config', link: '/npm/markdownlint' },
+            { text: 'ise-fe-commitlint-config', link: '/npm/commitlint' },
+          ],
         },
       ],
     },
