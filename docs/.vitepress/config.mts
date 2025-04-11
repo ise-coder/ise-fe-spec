@@ -13,6 +13,7 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '编码规范', link: '/coding/html' },
       { text: '工程规范', link: '/engineering/git' },
+      { text: 'NPM包', link: '/npm/markdownlint' },
     ],
     sidebar: {
       '/coding/': [
@@ -35,6 +36,12 @@ export default defineConfig({
             { text: '文档规范', link: '/engineering/doc' },
             { text: 'CHANGELOG 规范', link: '/engineering/changelog' },
           ],
+        },
+      ],
+      '/npm/': [
+        {
+          text: 'NPM包',
+          items: [{ text: 'ise-fe-markdownlint-config', link: '/npm/markdownlint' }],
         },
       ],
     },
