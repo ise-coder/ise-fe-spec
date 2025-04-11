@@ -22,6 +22,7 @@ export default defineConfig({
             { text: 'HTML 编码规范', link: '/coding/html' },
             { text: 'CSS 编码规范', link: '/coding/css' },
             { text: 'JavaScript 编码规范', link: '/coding/javascript' },
+            { text: 'TypeScript 编码规范', link: '/coding/typescript' },
           ],
         },
       ],
