@@ -1,5 +1,7 @@
 # ise-fe-markdownlint-config
 
+> ISE 文档规范
+
 支持配套的 [markdownlint 可共享配置](https://www.npmjs.com/package/markdownlint#optionsconfig)。
 
 ## 安装
