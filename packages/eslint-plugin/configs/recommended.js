@@ -3,5 +3,6 @@ module.exports = {
   rules: {
     'ise-fe-eslint-plugin/no-http-url': 'warn',
     'ise-fe-eslint-plugin/no-broad-semantic-versioning': 'error',
+    'ise-fe-eslint-plugin/no-secret-info': 'error',
   },
 };
