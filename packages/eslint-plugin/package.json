@@ -1,0 +1,44 @@
+{
+  "name": "ise-fe-eslint-plugin",
+  "version": "0.0.0",
+  "description": "ISE 自定义 eslint 插件",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "prepublishOnly": "npm run test"
+  },
+  "keywords": [
+    "ise",
+    "eslint",
+    "eslint-plugin"
+  ],
+  "files": [
+    "configs/",
+    "rules/",
+    "README.md"
+  ],
+  "author": "mj <boss_think@163.com>",
+  "homepage": "https://github.com/ise-coder/ise-fe-spec#readme",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ise-coder/ise-fe-spec.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ise-coder/ise-fe-spec/issues"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.7.0",
+    "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "fs-extra": "^9.0.1",
+    "require-all": "^3.0.0"
+  }
+}
