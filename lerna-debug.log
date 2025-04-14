@@ -1,8 +1,0 @@
-65 error Error: Command failed with exit code 128: git tag v1.0.0 -m v1.0.0
-65 error fatal: tag 'v1.0.0' already exists
-65 error     at makeError (/Users/a1/Documents/workspace/github/ise-fe-spec/node_modules/.pnpm/execa@5.0.0/node_modules/execa/lib/error.js:59:11)
-65 error     at handlePromise (/Users/a1/Documents/workspace/github/ise-fe-spec/node_modules/.pnpm/execa@5.0.0/node_modules/execa/index.js:114:26)
-65 error     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-65 error     at async VersionCommand.gitCommitAndTagVersion (/Users/a1/Documents/workspace/github/ise-fe-spec/node_modules/.pnpm/lerna@8.2.1_encoding@0.1.13/node_modules/lerna/dist/index.js:9972:9)
-65 error     at async VersionCommand.commitAndTagUpdates (/Users/a1/Documents/workspace/github/ise-fe-spec/node_modules/.pnpm/lerna@8.2.1_encoding@0.1.13/node_modules/lerna/dist/index.js:9937:18)
-65 error     at async Promise.all (index 0)

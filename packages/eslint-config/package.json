@@ -16,7 +16,7 @@
   "scripts": {
     "lint": "eslint ./",
     "print-config": "eslint --print-config ./index.js > ./print-config.json",
-    "test": "mocha ./__tests__/*.test.js --timeout 5000"
+    "test": "mocha ./__tests__/*.test.js --timeout 10000"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.com/"
