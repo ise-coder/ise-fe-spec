@@ -1,6 +1,6 @@
 {
   "name": "ise-fe-lint",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "description": "ISE 前端编码规范工程化标准脚手架",
   "bin": "./lib/cli.js",
   "main": "./lib/index.js",
