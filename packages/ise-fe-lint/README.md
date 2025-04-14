@@ -64,11 +64,11 @@ npm install ise-fe-lint --save
 
 :trident: API
 
-1. init：初始化
+:eight_spoked_asterisk: init：初始化
 
-- ise-fe-lint.init(config)：将项目一键接入规范，效果等同于CLI中的 `ise-fe-lint init`
+`ise-fe-lint.init(config)`：将项目一键接入规范，效果等同于CLI中的 `ise-fe-lint init`
 
-:eight_spoked_asterisk: 示例：
+示例：
 
 ``` js
 await ise-fe-lint.init({
@@ -81,7 +81,7 @@ await ise-fe-lint.init({
   })
 ```
 
-:eight_spoked_asterisk: config 参数如下：
+config 参数如下：
 
 | 参数               | 类型       | 默认值 | 说明                                                                                                                |
 | ------------------ | ---------- | ------ | ------------------------------------------------------------------------------------------------------------------- |
@@ -93,7 +93,7 @@ await ise-fe-lint.init({
 | enablePrettier     | boolean    | -      | 是否启用 Prettier                                                                                                   |
 | disableNpmInstall  | boolean    | false  | 是否禁用自动在初始化完成后安装依赖                                                                                  |
 
-:eight_spoked_asterisk: ESLintType 取值如下：
+ESLintType 取值如下：
 
 - `javascript/default`: 纯 JS 项目
 - `javascript/vue`: JS + Vue 项目
@@ -104,7 +104,7 @@ await ise-fe-lint.init({
 - `typescript/react`: TS + React 项目
 - `typescript/node`: TS + Node.js 项目
 
-:eight_spoked_asterisk: 配置如下：
+配置如下：
 
 `ise-fe-lint` 基于一份配置进行扫描（但你也可以零配置使用），支持的配置参数有：
 
