@@ -37,32 +37,32 @@
     "url": "https://github.com/ise-coder/ise-fe-spec/issues"
   },
   "devDependencies": {
+    "@types/cross-spawn": "^6.0.2",
+    "@types/ejs": "^3.1.0",
+    "@types/eslint": "^8.4.1",
+    "@types/fs-extra": "^9.0.13",
+    "@types/glob": "^7.2.0",
+    "@types/lodash": "^4.14.180",
+    "@types/prettier": "^2.4.4",
+    "@types/stylelint": "^14.0.0",
     "copyfiles": "^2.4.1",
     "jest": "^27.5.1",
     "nyc": "^15.1.0",
-    "typescript": "^4.6.2",
-    "@types/eslint": "^8.4.1",
-    "@types/fs-extra": "^9.0.13",
-    "@types/prettier": "^2.4.4",
-    "@types/stylelint": "^14.0.0",
-    "@types/cross-spawn": "^6.0.2",
-    "@types/glob": "^7.2.0",
-    "@types/lodash": "^4.14.180",
-    "@types/ejs": "^3.1.0"
+    "typescript": "^4.6.2"
   },
   "dependencies": {
-    "eslint": "^8.7.0",
-    "stylelint": "^14.3.0",
-    "markdownlint": "^0.25.1",
-    "ora": "^5.1.0",
-    "fs-extra": "^9.0.1",
-    "inquirer": "^7.3.3",
-    "cross-spawn": "^7.0.3",
     "chalk": "^4.1.0",
     "command-exists": "^1.2.9",
-    "glob": "^7.1.6",
-    "lodash": "^4.17.20",
+    "commander": "^8.0.0",
+    "cross-spawn": "^7.0.3",
     "ejs": "^3.1.5",
-    "commander": "^8.0.0"
+    "eslint": "^8.7.0",
+    "fs-extra": "^9.0.1",
+    "glob": "^7.1.6",
+    "inquirer": "^7.3.3",
+    "lodash": "^4.17.20",
+    "markdownlint": "^0.25.1",
+    "ora": "^5.1.0",
+    "stylelint": "^14.3.0"
   }
 }
