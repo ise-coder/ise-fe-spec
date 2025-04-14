@@ -14,7 +14,7 @@ layout: doc
 
 | 规范 | Lint 工具 | npm 包 |
 | ---- | ---- | ---- |
-| 文档规范 | [markdownlint](https://github.com/DavidAnson/markdownlint) | [ise-fe-eslint-config](https://www.npmjs.com/package/ise-fe-stylelint-config) |
+| 文档规范 | [markdownlint](https://github.com/DavidAnson/markdownlint) | [ise-fe-markdownlint-config](https://www.npmjs.com/package/ise-fe-markdownlint-config) |
 | Git 规范 | [commitlint](https://commitlint.js.org/) | [ise-fe-commitlint-config](https://www.npmjs.com/package/ise-fe-commitlint-config) |
 | CSS 规范 | [stylelint](https://stylelint.io/) | [ise-fe-stylelint-config](https://www.npmjs.com/package/ise-fe-stylelint-config) |
 | JS/TS/Node 规范 | [ESLint](https://eslint.org/docs/v8.x) | [ise-fe-eslint-config](https://www.npmjs.com/package/ise-fe-eslint-config) |
