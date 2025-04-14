@@ -82,23 +82,23 @@ export const MARKDOWN_LINT_IGNORE_PATTERN: string[] = [
 export const PROJECT_TYPES: Array<{ name: string; value: string }> = [
   {
     name: '纯 JS 项目',
-    value: 'javascript/default',
+    value: 'index',
   },
   {
     name: 'JS + Vue 项目',
-    value: 'javascript/vue',
+    value: 'vue',
   },
   {
     name: 'JS + React 项目',
-    value: 'javascript/react',
+    value: 'react',
   },
   {
     name: 'JS + Node.js 项目',
-    value: 'javascript/node',
+    value: 'node',
   },
   {
     name: '纯 TS 项目',
-    value: 'typescript/default',
+    value: 'typescript',
   },
   {
     name: 'TS + Vue 项目',

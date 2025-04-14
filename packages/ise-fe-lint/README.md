@@ -95,11 +95,11 @@ config 参数如下：
 
 ESLintType 取值如下：
 
-- `javascript/default`: 纯 JS 项目
-- `javascript/vue`: JS + Vue 项目
-- `javascript/react`: JS + React 项目
-- `javascript/node`: JS + Node.js 项目
-- `typescript/default`: 纯 TS 项目
+- `index`: 纯 JS 项目
+- `vue`: JS + Vue 项目
+- `react`: JS + React 项目
+- `node`: JS + Node.js 项目
+- `typescript`: 纯 TS 项目
 - `typescript/vue`: TS + Vue 项目
 - `typescript/react`: TS + React 项目
 - `typescript/node`: TS + Node.js 项目

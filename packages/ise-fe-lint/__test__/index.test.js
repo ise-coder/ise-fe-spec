@@ -17,7 +17,7 @@ describe('init', () => {
     await init({
       cwd: outputPath,
       checkVersionUpdate: false,
-      eslintType: 'javascript/default',
+      eslintType: 'index',
       enableStylelint: true,
       enableMarkdownlint: true,
       enablePrettier: true,
