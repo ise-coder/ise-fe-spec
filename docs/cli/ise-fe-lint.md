@@ -1,8 +1,12 @@
+---
+layout: doc
+---
+
 # ise-fe-lint
 
 > ISE 前端编码规范工程化标准脚手架
 
-`ise-fe-lint` 是[ISE 前端编码规范工程化](https://github.com/ise-coder/ise-fe-spec)的配套 Lint 工具，可以为项目一键接入规范，保障项目的编码规范和代码质量。:sun_with_face: [emoji](https://github.com/zhouie/markdown-emoji)
+`ise-fe-lint` 是[ISE 前端编码规范工程化](https://github.com/ise-coder/ise-fe-spec)的配套 Lint 工具，可以为项目一键接入规范，保障项目的编码规范和代码质量。
 
 ## 背景
 
@@ -21,7 +25,7 @@
 
 ## CLI 使用
 
-:trident: 安装
+> [!TIP] 安装
 
 在终端执行：
 
@@ -31,7 +35,7 @@ npm install ise-fe-lint -g
 
 安装完成后，可执行 `ise-fe-lint -h` 以验证安装成功。
 
-:trident: 使用
+> [!TIP] 使用
 
  `ise-fe-lint init`：一键接入
 
@@ -56,19 +60,19 @@ npm install ise-fe-lint -g
 
 ## Node.js API 使用
 
-:trident: 安装
+> [!TIP] 安装
 
 ```bash
 npm install ise-fe-lint --save
 ```
 
-:trident: API
+> [!IMPORTANT] API
 
 1. init：初始化
 
 - ise-fe-lint.init(config)：将项目一键接入规范，效果等同于CLI中的 `ise-fe-lint init`
 
-:eight_spoked_asterisk: 示例：
+示例：
 
 ``` js
 await ise-fe-lint.init({
@@ -81,7 +85,7 @@ await ise-fe-lint.init({
   })
 ```
 
-:eight_spoked_asterisk: config 参数如下：
+config 参数如下：
 
 | 参数               | 类型       | 默认值 | 说明                                                                                                                |
 | ------------------ | ---------- | ------ | ------------------------------------------------------------------------------------------------------------------- |
@@ -93,7 +97,7 @@ await ise-fe-lint.init({
 | enablePrettier     | boolean    | -      | 是否启用 Prettier                                                                                                   |
 | disableNpmInstall  | boolean    | false  | 是否禁用自动在初始化完成后安装依赖                                                                                  |
 
-:eight_spoked_asterisk: ESLintType 取值如下：
+ESLintType 取值如下：
 
 - `javascript/default`: 纯 JS 项目
 - `javascript/vue`: JS + Vue 项目
@@ -104,7 +108,7 @@ await ise-fe-lint.init({
 - `typescript/react`: TS + React 项目
 - `typescript/node`: TS + Node.js 项目
 
-:eight_spoked_asterisk: 配置如下：
+配置如下：
 
 `ise-fe-lint` 基于一份配置进行扫描（但你也可以零配置使用），支持的配置参数有：
 

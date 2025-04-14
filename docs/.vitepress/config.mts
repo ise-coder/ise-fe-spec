@@ -14,6 +14,7 @@ export default defineConfig({
       { text: '编码规范', link: '/coding/html' },
       { text: '工程规范', link: '/engineering/git' },
       { text: 'NPM包', link: '/npm/markdownlint' },
+      { text: '脚手架', link: '/cli/ise-fe-lint' },
     ],
     sidebar: {
       '/coding/': [
@@ -48,6 +49,12 @@ export default defineConfig({
             { text: 'ise-fe-eslint-config', link: '/npm/eslint' },
             { text: 'ise-fe-eslint-plugin', link: '/npm/eslint-plugin' },
           ],
+        },
+      ],
+      '/cli/': [
+        {
+          text: '脚手架',
+          items: [{ text: 'ise-fe-lint', link: '/cli/ise-fe-lint' }],
         },
       ],
     },
