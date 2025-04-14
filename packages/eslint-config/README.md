@@ -54,7 +54,7 @@ npm i -D ise-fe-eslint-config @babel/core @babel/eslint-parser eslint-plugin-imp
 }
 ```
 
-## JS + React 项目 ｜ ise-fe-eslint-config/React
+## JS + React 项目 ｜ ise-fe-eslint-config/react
 
 针对 JS React 项目，继承了默认配置，并启用了 [eslint-plugin-React](https://www.npmjs.com/package/eslint-plugin-react) 和 [eslint-plugin-React-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks) 的规则。
 

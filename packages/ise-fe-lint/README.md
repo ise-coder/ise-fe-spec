@@ -2,7 +2,9 @@
 
 > ISE 前端编码规范工程化标准脚手架
 
-`ise-fe-lint` 是[ISE 前端编码规范工程化](https://github.com/ise-coder/ise-fe-spec)的配套 Lint 工具，可以为项目一键接入规范，保障项目的编码规范和代码质量。:sun_with_face: [emoji](https://github.com/zhouie/markdown-emoji)
+`ise-fe-lint` 是[ISE 前端编码规范工程化](https://github.com/ise-coder/ise-fe-spec)的配套 Lint 工具，可以为项目一键接入规范，保障项目的编码规范和代码质量。
+
+:sun_with_face:  [emoji](https://github.com/zhouie/markdown-emoji)
 
 ## 背景
 
@@ -10,7 +12,7 @@
 
 | 规范 | Lint 工具 | npm 包 |
 | ---- | ---- | ---- |
-| 文档规范 | [markdownlint](https://github.com/DavidAnson/markdownlint) | [ise-fe-eslint-config](https://www.npmjs.com/package/ise-fe-stylelint-config) |
+| 文档规范 | [markdownlint](https://github.com/DavidAnson/markdownlint) | [ise-fe-eslint-config](https://www.npmjs.com/package/ise-fe-markdownlint-config) |
 | Git 规范 | [commitlint](https://commitlint.js.org/) | [ise-fe-commitlint-config](https://www.npmjs.com/package/ise-fe-commitlint-config) |
 | CSS 规范 | [stylelint](https://stylelint.io/) | [ise-fe-stylelint-config](https://www.npmjs.com/package/ise-fe-stylelint-config) |
 | JS/TS/Node 规范 | [ESLint](https://eslint.org/docs/v8.x) | [ise-fe-eslint-config](https://www.npmjs.com/package/ise-fe-eslint-config) |
