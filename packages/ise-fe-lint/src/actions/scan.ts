@@ -1,6 +1,6 @@
 import fs from 'fs-extra';
 import path from 'path';
-import { doESLint, doMarkdownlint } from '../lints';
+import { doESLint, doMarkdownlint, doStylelint } from '../lints';
 import type { Config, PKG, ScanOptions, ScanReport, ScanResult } from '../types';
 import { PKG_NAME } from '../constants/common';
 
@@ -32,6 +32,16 @@ export default async (options: ScanOptions): Promise<ScanReport> => {
     try {
       const markdownlintResults = await doMarkdownlint({ ...options, pkg, config });
       results = results.concat(markdownlintResults);
+    } catch (e) {
+      runErrors.push(e);
+    }
+  }
+
+  // stylelint
+  if (config.enableStylelint !== false) {
+    try {
+      const stylelintResults = await doStylelint({ ...options, pkg, config });
+      results = results.concat(stylelintResults);
     } catch (e) {
       runErrors.push(e);
     }
