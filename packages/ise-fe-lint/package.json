@@ -67,18 +67,18 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-vue": "^7.3.0",
-    "ise-fe-eslint-config": "workspace:*",
     "fs-extra": "^9.0.1",
     "glob": "^7.1.6",
     "inquirer": "^7.3.3",
+    "ise-fe-commitlint-config": "workspace:*",
+    "ise-fe-eslint-config": "workspace:*",
+    "ise-fe-markdownlint-config": "workspace:*",
+    "ise-fe-stylelint-config": "workspace:*",
     "lodash": "^4.17.20",
     "markdownlint": "^0.25.1",
     "markdownlint-rule-helpers": "^0.13.0",
-    "ise-fe-markdownlint-config": "workspace:*",
     "ora": "^5.1.0",
     "stylelint": "^14.3.0",
-    "stylelint-scss": "^4.1.0",
-    "ise-fe-stylelint-config": "workspace:*",
-    "ise-fe-commitlint-config": "workspace:*"
+    "stylelint-scss": "^4.1.0"
   }
 }
