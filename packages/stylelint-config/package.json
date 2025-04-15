@@ -1,6 +1,6 @@
 {
   "name": "ise-fe-stylelint-config",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "ISE CSS规范",
   "keywords": [
     "ise",
@@ -33,5 +33,6 @@
     "postcss-scss": "^4.0.9",
     "stylelint": "^15.11.0",
     "stylelint-scss": "^4.1.0"
-  }
+  },
+  "gitHead": "64b23ae01a536323ec3648a7b6f54d6bbe2ac84f"
 }

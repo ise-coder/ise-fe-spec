@@ -1,6 +1,6 @@
 {
   "name": "ise-fe-lint",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "ISE 前端编码规范工程化标准脚手架",
   "bin": "./lib/cli.js",
   "main": "./lib/index.js",
@@ -56,7 +56,7 @@
     "@babel/core": "^7.16.0",
     "@babel/eslint-parser": "^7.16.3",
     "@babel/preset-react": "^7.16.0",
-    "@commitlint/cli": "^16.0.0",
+    "@commitlint/cli": "^19.0.0",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
     "chalk": "^4.1.0",
@@ -90,7 +90,8 @@
     "ora": "^5.1.0",
     "prettier": "^2.2.1",
     "strip-ansi": "^6.0.0",
-    "stylelint": "^14.3.0",
+    "postcss-scss": "^4.0.9",
+    "stylelint": "^15.11.0",
     "stylelint-scss": "^4.1.0",
     "terminal-link": "^2.1.1",
     "text-table": "^0.2.0"

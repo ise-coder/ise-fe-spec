@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ise",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "ISE JavaScript TypeScript Node.js 规范",
   "keywords": [
     "ise",
@@ -45,7 +45,7 @@
     "eslint-plugin-vue": "^7.3.0",
     "lodash": "^4.17.21",
     "mocha": "^8.2.1",
-    "typescript": "^4.1.2",
+    "typescript": "^4.6.2",
     "vue-eslint-parser": "^7.3.0"
   }
 }
