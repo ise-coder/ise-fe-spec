@@ -118,3 +118,24 @@ export const PROJECT_TYPES: Array<{ name: string; value: string }> = [
  * eslint 扫描文件扩展名
  */
 export const ESLINT_FILE_EXT: string[] = ['.js', '.jsx', '.ts', '.tsx', '.vue'];
+
+/**
+ * Prettier 扫描文件扩展名
+ */
+export const PRETTIER_FILE_EXT = [
+  ...STYLELINT_FILE_EXT,
+  ...ESLINT_FILE_EXT,
+  ...MARKDOWN_LINT_FILE_EXT,
+];
+
+/**
+ * Prettier 扫描忽略的文件或文件目录
+ */
+export const PRETTIER_IGNORE_PATTERN: string[] = [
+  'node_modules/**/*',
+  'build/**/*',
+  'dist/**/*',
+  'lib/**/*',
+  'es/**/*',
+  'coverage/**/*',
+];

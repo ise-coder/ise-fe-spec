@@ -1,6 +1,6 @@
 import fs from 'fs-extra';
 import path from 'path';
-import { doESLint, doMarkdownlint, doStylelint } from '../lints';
+import { doESLint, doMarkdownlint, doStylelint, doPrettier } from '../lints';
 import type { Config, PKG, ScanOptions, ScanReport, ScanResult } from '../types';
 import { PKG_NAME } from '../constants/common';
 
@@ -16,6 +16,11 @@ export default async (options: ScanOptions): Promise<ScanReport> => {
   const config: Config = scanConfig || readConfigFile(`${PKG_NAME}.config.js`);
   const runErrors: Error[] = [];
   let results: ScanResult[] = [];
+
+  // prettier
+  if (fix && config.enablePrettier !== false) {
+    await doPrettier(options);
+  }
 
   // eslint
   if (config.enableESLint !== false) {
