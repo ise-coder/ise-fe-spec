@@ -32,14 +32,14 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: pnpm/action-setup@v3
+      - uses: pnpm/action-setup@v4
         with:
-          version: 10
+          version: 9.15.9
+      - run: pnpm cache clean
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: pnpm
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Install and Build
@@ -47,7 +47,7 @@ jobs:
           pnpm run init
           pnpm run docs:build
         env:
-          NODE_OPTIONS: "--max_old_space_size=4096 --openssl-legacy-provider"
+          NODE_OPTIONS: '--max_old_space_size=4096 --openssl-legacy-provider'
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
