@@ -1,6 +1,6 @@
 {
   "name": "ise-fe-lint",
-  "version": "1.4.7",
+  "version": "1.5.0",
   "description": "ISE 前端编码规范工程化标准脚手架",
   "bin": "./lib/cli.js",
   "main": "./lib/index.js",
@@ -45,6 +45,7 @@
     "@types/lodash": "^4.14.180",
     "@types/prettier": "^2.4.4",
     "@types/stylelint": "^14.0.0",
+    "@types/text-table": "^0.2.2",
     "copyfiles": "^2.4.1",
     "jest": "^27.5.1",
     "nyc": "^15.1.0",
@@ -78,6 +79,12 @@
     "stylelint": "^14.3.0",
     "stylelint-scss": "^4.1.0",
     "ise-fe-stylelint-config": "workspace:*",
-    "ise-fe-commitlint-config": "workspace:*"
+    "ise-fe-commitlint-config": "workspace:*",
+    "text-table": "^0.2.0",
+    "terminal-link": "^2.1.1",
+    "is-docker": "^2.1.1",
+    "strip-ansi": "^6.0.0",
+    "fast-glob": "^3.2.11",
+    "husky": "^9.1.7"
   }
 }

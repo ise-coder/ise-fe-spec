@@ -49,3 +49,57 @@ export interface InitOptions {
   // 是否禁用自动在初始化完成后安装依赖
   disableNpmInstall?: boolean;
 }
+
+export interface ScanOptions {
+  // lint 运行的工程目录
+  cwd: string;
+  // 进行规范扫描的目录
+  include: string;
+  // 进行规范扫描的文件列表
+  files?: string[];
+  // 仅报告错误信息
+  quiet?: boolean;
+  // 忽略 eslint 的 ignore 配置文件和 ignore 规则
+  ignore?: boolean;
+  // 自动修复
+  fix?: boolean;
+  // 生成报告文件
+  outputReport?: boolean;
+  // scan 时指定 ise-fe-lint config，优先级高于 ise-fe-lint.config.js
+  config?: Config;
+}
+
+export interface ScanResult {
+  filePath: string;
+  errorCount: number;
+  warningCount: number;
+  fixableErrorCount: number;
+  fixableWarningCount: number;
+  messages: Array<{
+    line: number;
+    column: number;
+    rule: string;
+    url: string;
+    message: string;
+    errored: boolean;
+  }>;
+}
+
+export interface ScanReport {
+  results: ScanResult[];
+  errorCount: number;
+  warningCount: number;
+  runErrors: Error[];
+}
+
+export interface IGetLintConfig {
+  (options: ScanOptions, pkg: PKG, config: Config): ESLint.Options;
+  (options: ScanOptions, pkg: PKG, config: Config): stylelint.LinterOptions;
+  (options: ScanOptions, pkg: PKG, config: Config): markdownlint.Options;
+}
+
+export interface IFormatResults {
+  (results: ESLint.LintResult[], quiet: boolean): ScanResult[];
+  (results: stylelint.LintResult[], quiet: boolean): ScanResult[];
+  (results: markdownlint.LintResults, quiet: boolean): ScanResult[];
+}

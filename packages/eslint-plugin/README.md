@@ -17,7 +17,7 @@ npm install ise-fe-eslint-plugin eslint --save-dev
 ```js
 // .eslintrc.js
 module.exports = {
-  plugin: ['eslint-config-encode'],
+  plugin: ['ise-eslint-config'],
   rules: {
     'ise-fe-eslint-plugin/no-http-url': 'warn',
     'ise-fe-eslint-plugin/no-secret-info': 'error',

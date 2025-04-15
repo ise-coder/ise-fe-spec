@@ -113,3 +113,8 @@ export const PROJECT_TYPES: Array<{ name: string; value: string }> = [
     value: 'typescript/node',
   },
 ];
+
+/**
+ * eslint 扫描文件扩展名
+ */
+export const ESLINT_FILE_EXT: string[] = ['.js', '.jsx', '.ts', '.tsx', '.vue'];

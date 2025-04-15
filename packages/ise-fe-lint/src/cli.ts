@@ -1,11 +1,37 @@
 #!/usr/bin/env node
 import path from 'path';
 import { program } from 'commander';
+import fs from 'fs-extra';
+import glob from 'glob';
+import ora from 'ora';
+import { execSync } from 'child_process';
 import init from './actions/init';
+import scan from './actions/scan';
 import generateTemplate from './utils/generate-template';
+import npmType from './utils/npm-type';
+import log from './utils/log';
+import printReport from './utils/print-report';
 import { PKG_NAME, PKG_VERSION } from './constants/common';
 
 const cwd = process.cwd();
+
+/**
+ * 若无 node_modules，则帮用户 install（否则会找不到 config）
+ */
+const installDepsIfThereNo = async () => {
+  const lintConfigFiles = [].concat(
+    glob.sync('.eslintrc?(.@(js|yaml|yml|json))', { cwd }),
+    glob.sync('.stylelintrc?(.@(js|yaml|yml|json))', { cwd }),
+    glob.sync('.markdownlint(.@(yaml|yml|json))', { cwd }),
+  );
+  const nodeModulesPath = path.resolve(cwd, 'node_modules');
+
+  if (!fs.existsSync(nodeModulesPath) && lintConfigFiles.length > 0) {
+    const npm = await npmType;
+    log.info(`使用项目 Lint 配置，检测到项目未安装依赖，将进行安装（执行 ${npm} install）`);
+    execSync(`cd ${cwd} && ${npm} i`);
+  }
+};
 
 const initProgram = () => {
   program
@@ -29,6 +55,41 @@ const initProgram = () => {
           checkVersionUpdate: true,
         });
       }
+    });
+
+  program
+    .command('scan')
+    .description('一键扫描：对项目进行代码规范问题扫描')
+    .option('-q, --quiet', '仅报告错误信息 - 默认: false')
+    .option('-o, --output-report', '输出扫描出的规范问题日志')
+    .option('-i, --include <dirpath>', '指定要进行规范扫描的目录')
+    .option('--no-ignore', '忽略 eslint 的 ignore 配置文件和 ignore 规则')
+    .action(async (cmd) => {
+      await installDepsIfThereNo();
+
+      const checking = ora();
+      checking.start(`执行 ${PKG_NAME} 代码检查`);
+
+      const { results, errorCount, warningCount, runErrors } = await scan({
+        cwd,
+        fix: false,
+        include: cmd.include || cwd,
+        quiet: Boolean(cmd.quiet),
+        outputReport: Boolean(cmd.outputReport),
+        ignore: cmd.ignore, // 对应 --no-ignore
+      });
+      let type = 'succeed';
+      if (runErrors.length > 0 || errorCount > 0) {
+        type = 'fail';
+      } else if (warningCount > 0) {
+        type = 'warn';
+      }
+
+      checking[type]();
+      if (results.length > 0) printReport(results, false);
+
+      // 输出 lint 运行错误
+      runErrors.forEach((e) => console.log(e));
     });
 
   // 解析命令行参数

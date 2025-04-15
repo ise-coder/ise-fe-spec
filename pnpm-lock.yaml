@@ -162,15 +162,24 @@ importers:
       eslint-plugin-vue:
         specifier: ^7.3.0
         version: 7.20.0(eslint@8.57.1)
+      fast-glob:
+        specifier: ^3.2.11
+        version: 3.3.3
       fs-extra:
         specifier: ^9.0.1
         version: 9.1.0
       glob:
         specifier: ^7.1.6
         version: 7.2.3
+      husky:
+        specifier: ^9.1.7
+        version: 9.1.7
       inquirer:
         specifier: ^7.3.3
         version: 7.3.3
+      is-docker:
+        specifier: ^2.1.1
+        version: 2.2.1
       ise-fe-commitlint-config:
         specifier: workspace:*
         version: link:../commitlint-config
@@ -195,12 +204,21 @@ importers:
       ora:
         specifier: ^5.1.0
         version: 5.4.1
+      strip-ansi:
+        specifier: ^6.0.0
+        version: 6.0.1
       stylelint:
         specifier: ^14.3.0
         version: 14.16.1
       stylelint-scss:
         specifier: ^4.1.0
         version: 4.7.0(stylelint@14.16.1)
+      terminal-link:
+        specifier: ^2.1.1
+        version: 2.1.1
+      text-table:
+        specifier: ^0.2.0
+        version: 0.2.0
     devDependencies:
       '@types/cross-spawn':
         specifier: ^6.0.2
@@ -226,6 +244,9 @@ importers:
       '@types/stylelint':
         specifier: ^14.0.0
         version: 14.0.0(typescript@4.9.5)
+      '@types/text-table':
+        specifier: ^0.2.2
+        version: 0.2.5
       copyfiles:
         specifier: ^2.4.1
         version: 2.4.1
@@ -1560,6 +1581,9 @@ packages:
   '@types/stylelint@14.0.0':
     resolution: {integrity: sha512-0eFbWemetFjcDiBBKne7QJBfdicxdmdJ1qGMye3sDYe7mCh8EfuovjkUTg6zXvYhJcWBhIIQnC6bmFYjpYetgQ==, tarball: https://registry.npmjs.org/@types/stylelint/-/stylelint-14.0.0.tgz}
     deprecated: This is a stub types definition. stylelint provides its own type definitions, so you do not need this installed.
+
+  '@types/text-table@0.2.5':
+    resolution: {integrity: sha512-hcZhlNvMkQG/k1vcZ6yHOl6WAYftQ2MLfTHcYRZ2xYZFD8tGVnE3qFV0lj1smQeDSR7/yY0PyuUalauf33bJeA==, tarball: https://registry.npmjs.org/@types/text-table/-/text-table-0.2.5.tgz}
 
   '@types/unist@2.0.11':
     resolution: {integrity: sha512-CmBKiL6NNo/OqgmMn95Fk9Whlp2mtvIv+KNpQKN2F4SjvrEesubTRWGYSg+BnWZOnlCaSTU1sMpsBOzgbYhnsA==, tarball: https://registry.npmjs.org/@types/unist/-/unist-2.0.11.tgz}
@@ -8555,6 +8579,8 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - typescript
+
+  '@types/text-table@0.2.5': {}
 
   '@types/unist@2.0.11': {}
 
