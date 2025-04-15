@@ -1,6 +1,6 @@
 {
   "name": "ise-fe-stylelint-config",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "description": "ISE CSS规范",
   "keywords": [
     "ise",
@@ -10,7 +10,7 @@
   "author": "mj <boss_think@163.com>",
   "homepage": "https://github.com/ise-coder/ise-fe-spec#readme",
   "license": "MIT",
-  "main": "index.json",
+  "main": "index.js",
   "scripts": {
     "test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" jest"
   },
