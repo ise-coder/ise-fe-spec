@@ -1,5 +1,5 @@
 {
-  "name": "ise-fe-eslint-config",
+  "name": "eslint-config-ise",
   "version": "1.5.0",
   "description": "ISE JavaScript TypeScript Node.js 规范",
   "keywords": [
