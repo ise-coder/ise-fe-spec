@@ -1,6 +1,6 @@
 {
   "name": "ise-fe-eslint-plugin",
-  "version": "1.4.7",
+  "version": "1.4.8",
   "description": "ISE 自定义 eslint 插件",
   "main": "index.js",
   "scripts": {
