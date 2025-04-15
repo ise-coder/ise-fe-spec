@@ -5,10 +5,10 @@ import { PKG } from '../../types';
  * 获取 ESLint 配置类型
  * @param cwd
  * @param pkg
- * @returns ise-fe-eslint-config/index
- * @returns ise-fe-eslint-config/react
- * @returns ise-fe-eslint-config/typescript/index
- * @returns ise-fe-eslint-config/typescript/react
+ * @returns eslint-config-ise/index
+ * @returns eslint-config-ise/react
+ * @returns eslint-config-ise/typescript/index
+ * @returns eslint-config-ise/typescript/react
  */
 export function getESLintConfigType(cwd: string, pkg: PKG): string {
   const tsFiles = glob.sync('./!(node_modules)/**/*.@(ts|tsx)', { cwd });
@@ -25,5 +25,5 @@ export function getESLintConfigType(cwd: string, pkg: PKG): string {
     dsl = 'vue';
   }
 
-  return 'ise-fe-eslint-config/' + `${language}/${dsl}`.replace(/\/$/, '/index').replace(/^\//, '');
+  return 'eslint-config-ise/' + `${language}/${dsl}`.replace(/\/$/, '/index').replace(/^\//, '');
 }

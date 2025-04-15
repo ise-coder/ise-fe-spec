@@ -11,13 +11,13 @@ ruleTester.run('no-broad-semantic-versioning', rule, {
     {
       filename: 'package.json',
       code: `module.exports = ${JSON.stringify({
-        devDependencies: { 'ise-fe-eslint-plugin': '^1.0.0' },
+        devDependencies: { 'eslint-eslint-ise': '^1.0.0' },
       })}`,
     },
     {
       filename: 'package.json',
       code: `module.exports = ${JSON.stringify({
-        devDependencies: { 'ise-fe-eslint-plugin': '~1.0.0' },
+        devDependencies: { 'eslint-eslint-ise': '~1.0.0' },
       })}`,
     },
   ],
@@ -25,33 +25,33 @@ ruleTester.run('no-broad-semantic-versioning', rule, {
     {
       filename: 'package.json',
       code: `module.exports = ${JSON.stringify({
-        devDependencies: { 'ise-fe-eslint-plugin': '*' },
+        devDependencies: { 'eslint-eslint-ise': '*' },
       })}`,
       errors: [
         {
-          message: 'The "ise-fe-eslint-plugin" is not recommended to use "*"',
+          message: 'The "eslint-eslint-ise" is not recommended to use "*"',
         },
       ],
     },
     {
       filename: 'package.json',
       code: `module.exports = ${JSON.stringify({
-        devDependencies: { 'ise-fe-eslint-plugin': '1.x' },
+        devDependencies: { 'eslint-eslint-ise': '1.x' },
       })}`,
       errors: [
         {
-          message: 'The "ise-fe-eslint-plugin" is not recommended to use "1.x"',
+          message: 'The "eslint-eslint-ise" is not recommended to use "1.x"',
         },
       ],
     },
     {
       filename: 'package.json',
       code: `module.exports = ${JSON.stringify({
-        devDependencies: { 'ise-fe-eslint-plugin': '> 1.0.0' },
+        devDependencies: { 'eslint-eslint-ise': '> 1.0.0' },
       })}`,
       errors: [
         {
-          message: 'The "ise-fe-eslint-plugin" is not recommended to use "> 1.0.0"',
+          message: 'The "eslint-eslint-ise" is not recommended to use "> 1.0.0"',
         },
       ],
     },
