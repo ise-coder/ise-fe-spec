@@ -2,7 +2,7 @@
 
 > ISE 前端编码规范工程化标准脚手架
 
-`ise-fe-lint` 是[ISE 前端编码规范工程化](https://github.com/ise-coder/ise-fe-spec)的配套 Lint 工具，可以为项目一键接入规范，保障项目的编码规范和代码质量。
+`ise-fe-lint` 是[ISE 前端编码规范工程化](https://github.com/ise-coder/ise-fe-spec)的配套 Lint 工具，可以为项目一键接入规范、一键扫描和修复规范问题，保障项目的编码规范和代码质量。
 
 :sun_with_face:  [emoji](https://github.com/zhouie/markdown-emoji)
 
@@ -19,7 +19,7 @@
 
 可以看到这些 `Linter` 和规则包众多且零散，全部安装它们会给项目增加十几个依赖，接入和升级成本都比较高。
 
-`ise-fe-lint` 收敛屏蔽了这些依赖和配置细节，提供简单的 CLI 和 Node.js API，让项目能够一键接入，降低项目实施规范的成本
+`ise-fe-lint` 收敛屏蔽了这些依赖和配置细节，提供简单的 CLI 和 Node.js API，让项目能够一键接入、一键扫描、一键修复、一键升级，降低项目实施规范的成本
 
 ## CLI 使用
 
@@ -52,9 +52,35 @@ npm install ise-fe-lint -g
   - `.vscode/extensions.json`：写入规范相关的 [VSCode 插件推荐](https://code.visualstudio.com/docs/editor/extension-gallery#_workspace-recommended-extensions)，包括 `ESLint`、`stylelint`、`markdownlint`、`prettier` 等
   - `.vscode/settings.json`：写入规范相关的 [VSCode 设置](https://code.visualstudio.com/docs/getstarted/settings#_settings-file-locations)，设置 `ESLint` 和 `stylelint` 插件的 `validate` 及**保存时自动运行 fix**，如果选择使用 `Prettier`，会同时将 `prettier-vscode` 插件设置为各前端语言的 defaultFormatter，并配置**保存时自动格式化**
 
-> 注 1：如果项目已经配置过 ESLint、stylelint 等 Linter，执行 `ise-fe-lint init` 将会提示存在冲突的依赖和配置，并在得到确认后进行覆盖：
+> *注 1*：如果项目已经配置过 ESLint、stylelint 等 Linter，执行 `ise-fe-lint init` 将会提示存在冲突的依赖和配置，并在得到确认后进行覆盖。
 >
-> 注 2：如果项目的 .vscode/ 目录被 .gitignore 忽略，可以在拉取项目后单独执行 `ise-fe-lint init --vscode` 命令写入 `.vscode/extensions.json` 和 `.vscode/settings.json` 配置文件
+> *注 2*：如果项目的 .vscode/ 目录被 .gitignore 忽略，可以在拉取项目后单独执行 `ise-fe-lint init --vscode` 命令写入 `.vscode/extensions.json` 和 `.vscode/settings.json` 配置文件。
+
+`ise-fe-lint scan`：一键扫描
+
+在项目的根目录执行命令，即可扫描项目的规范问题：
+
+支持下列参数：
+
+- `-q` `--quiet` 仅报告 error 级别的问题
+- `-o` `--output-report` 输出扫描出的规范问题日志
+- `-i` `--include <dirpath>` 指定要进行规范扫描的目录
+- `--no-ignore` 忽略 eslint 的 ignore 配置文件和 ignore 规则
+
+>*注 1*：事实上，你可以在任意目录执行 `ise-fe-lint scan` `ise-fe-lint` 会根据文件类型、JSON 等特征嗅探项目类型。但我们还是推荐在执行过 `ise-fe-lint init` 的项目根目录执行 `ise-fe-lint scan`，以得到最准确的扫描结果。
+>
+> *注 2*: `ise-fe-lint` 会根据项目内有无 eslint 和 stylelint 配置文件判断使用项目的配置文件还是 `ise-fe-lint` 默认配置进行扫描。若使用项目的配置文件时，在未安装依赖时会帮其安装（执行 `npm i`）。若使用项目配置扫描失败，则使用默认配置扫描。
+
+`ise-fe-lint fix`：一键修复
+
+在项目的根目录执行命令，即可修复部分规范问题：
+
+支持下列参数：
+
+- `-i` `--include <dirpath>` 指定要进行修复扫描的目录
+- `--no-ignore` 忽略 eslint 的 ignore 配置文件和 ignore 规则
+
+注意请 review 下修复前后的代码，以免工具误修的情况。
 
 ## Node.js API 使用
 
@@ -128,5 +154,24 @@ module.exports = {
   enableStylelint: true,
   enableMarkdownlint: true,
   enablePrettier: true,
+};
+```
+
+## 常见问题
+
+### TypeScript 项目扫描性能问题
+
+如果你的 TS 项目 commit 卡口和 `ise-fe-lint scan` 运行时间很长，可以通过如下在 `.eslintrc.js` 中增加以下配置提升性能：
+
+```js
+module.exports = {
+  parserOptions: {
+    project: [], // for lint performance
+    createDefaultProgram: false, // for lint performance
+  },
+  rules: {
+    '@typescript-eslint/dot-notation': 0, // for lint performance
+    '@typescript-eslint/restrict-plus-operands': 0, // for lint performance
+  },
 };
 ```
