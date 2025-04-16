@@ -33,7 +33,7 @@ export function formatESLintResults(
               line,
               column,
               rule: ruleId,
-              url: rulesMeta[ruleId]?.docs?.url || '',
+              url: `https://github.com/eslint/eslint/blob/v8.7.0/docs/rules/${ruleId}.md`,
               message: message.replace(/([^ ])\.$/u, '$1'),
               errored: fatal || severity === 2,
             };

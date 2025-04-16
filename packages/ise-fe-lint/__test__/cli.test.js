@@ -10,7 +10,6 @@ const cli = (args, options) => {
       return result;
     })
     .catch((error) => {
-      console.error('执行命令出错:', error);
       console.error('错误时的stderr:', error.stderr);
       throw error;
     });
@@ -37,5 +36,27 @@ describe(`'exec' command`, () => {
   test(`'exec commitlint' should work as expected`, async () => {
     const { stdout } = await cli(['exec', 'commitlint', '--version']);
     expect(stdout).toMatch(semverRegex);
+  });
+});
+
+describe(`'fix' command`, () => {
+  const dir = path.resolve(__dirname, './fixtures/autofix');
+  const outputFilePath = path.resolve(dir, './temp/temp.js');
+  const errorFileContent = fs.readFileSync(path.resolve(dir, './semi-error.js'), 'utf8');
+  const expectedFileContent = fs.readFileSync(path.resolve(dir, './semi-expected.js'), 'utf8');
+
+  beforeEach(() => {
+    fs.outputFileSync(outputFilePath, errorFileContent, 'utf8');
+  });
+
+  test('should autofix problematic code', async () => {
+    await cli(['fix'], {
+      cwd: path.dirname(`${dir}/result`),
+    });
+    expect(fs.readFileSync(outputFilePath, 'utf8')).toEqual(expectedFileContent);
+  });
+
+  afterEach(() => {
+    fs.removeSync(`${dir}/temp`);
   });
 });
