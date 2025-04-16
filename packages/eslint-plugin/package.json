@@ -1,6 +1,6 @@
 {
   "name": "eslint-eslint-ise",
-  "version": "1.6.5",
+  "version": "1.6.6",
   "description": "ISE 自定义 eslint 插件",
   "main": "index.js",
   "scripts": {
