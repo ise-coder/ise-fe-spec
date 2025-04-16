@@ -10,6 +10,7 @@ const cli = (args, options) => {
       return result;
     })
     .catch((error) => {
+      console.error('执行命令出错:', error);
       console.error('错误时的stderr:', error.stderr);
       throw error;
     });
