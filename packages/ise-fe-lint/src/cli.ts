@@ -92,6 +92,28 @@ const initProgram = () => {
       runErrors.forEach((e) => console.log(e));
     });
 
+  program
+    .command('fix')
+    .description('一键修复：自动修复项目的代码规范扫描问题')
+    .option('-i, --include <dirpath>', '指定要进行修复扫描的目录')
+    .option('--no-ignore', '忽略 eslint 的 ignore 配置文件和 ignore 规则')
+    .action(async (cmd) => {
+      await installDepsIfThereNo();
+
+      const checking = ora();
+      checking.start(`执行 ${PKG_NAME} 代码修复`);
+
+      const { results } = await scan({
+        cwd,
+        fix: true,
+        include: cmd.include || cwd,
+        ignore: cmd.ignore, // 对应 --no-ignore
+      });
+
+      checking.succeed();
+      if (results.length > 0) printReport(results, true);
+    });
+
   // 解析命令行参数
   program.parse(process.argv);
 };
