@@ -7,6 +7,7 @@ import ora from 'ora';
 import { execSync } from 'child_process';
 import init from './actions/init';
 import scan from './actions/scan';
+import update from './actions/update';
 import generateTemplate from './utils/generate-template';
 import npmType from './utils/npm-type';
 import log from './utils/log';
@@ -113,6 +114,11 @@ const initProgram = () => {
       checking.succeed();
       if (results.length > 0) printReport(results, true);
     });
+
+  program
+    .command('update')
+    .description(`更新 ${PKG_NAME} 至最新版本`)
+    .action(() => update(true));
 
   // 解析命令行参数
   program.parse(process.argv);
