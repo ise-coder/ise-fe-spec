@@ -1,6 +1,6 @@
 {
-  "name": "ise-fe-commitlint-config",
-  "version": "1.7.11",
+  "name": "commitlint-config-ise",
+  "version": "1.7.12",
   "description": "ISE Git规范",
   "keywords": [
     "ise",

@@ -44,7 +44,7 @@ export default defineConfig({
           text: 'NPM包',
           items: [
             { text: 'ise-fe-markdownlint-config', link: '/npm/markdownlint' },
-            { text: 'ise-fe-commitlint-config', link: '/npm/commitlint' },
+            { text: 'commitlint-config-ise', link: '/npm/commitlint' },
             { text: 'ise-fe-stylelint-config', link: '/npm/stylelint' },
             { text: 'eslint-config-ise', link: '/npm/eslint' },
             { text: 'eslint-plugin-ise', link: '/npm/eslint-plugin' },
