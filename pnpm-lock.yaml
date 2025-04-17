@@ -27,8 +27,8 @@ importers:
         specifier: ^0.44.0
         version: 0.44.0
       pnpm:
-        specifier: ^10.8.0
-        version: 10.8.1
+        specifier: ^9.15.9
+        version: 9.15.9
       prettier:
         specifier: ^3.5.3
         version: 3.5.3
@@ -183,6 +183,9 @@ importers:
       eslint-plugin-vue:
         specifier: ^7.3.0
         version: 7.20.0(eslint@8.57.1)
+      execa:
+        specifier: ^5.0.0
+        version: 5.1.1
       fast-glob:
         specifier: ^3.2.11
         version: 3.3.3
@@ -192,9 +195,6 @@ importers:
       glob:
         specifier: ^7.1.6
         version: 7.2.3
-      husky:
-        specifier: ^9.1.7
-        version: 9.1.7
       inquirer:
         specifier: ^7.3.3
         version: 7.3.3
@@ -274,6 +274,9 @@ importers:
       copyfiles:
         specifier: ^2.4.1
         version: 2.4.1
+      husky:
+        specifier: ^9.1.7
+        version: 9.1.7
       jest:
         specifier: ^27.5.1
         version: 27.5.1(node-notifier@8.0.2)(ts-node@10.9.2(@types/node@22.14.1)(typescript@4.9.5))
@@ -5445,8 +5448,8 @@ packages:
     resolution: {integrity: sha512-HRDzbaKjC+AOWVXxAU/x54COGeIv9eb+6CkDSQoNTt4XyWoIJvuPsXizxu/Fr23EiekbtZwmh1IcIG/l/a10GQ==, tarball: https://registry.npmjs.org/pkg-dir/-/pkg-dir-4.2.0.tgz}
     engines: {node: '>=8'}
 
-  pnpm@10.8.1:
-    resolution: {integrity: sha512-xQCIupmMZ7jKjJnfil4C/Sri4rKaryOP6qnhJCSNP0j5+22yQklJ/5Ac/7teDwzBrWrttgLNKUUHUdEcNQI2dw==, tarball: https://registry.npmjs.org/pnpm/-/pnpm-10.8.1.tgz}
+  pnpm@9.15.9:
+    resolution: {integrity: sha512-aARhQYk8ZvrQHAeSMRKOmvuJ74fiaR1p5NQO7iKJiClf1GghgbrlW1hBjDolO95lpQXsfF+UA+zlzDzTfc8lMQ==, tarball: https://registry.npmjs.org/pnpm/-/pnpm-9.15.9.tgz}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -7874,7 +7877,7 @@ snapshots:
       '@types/istanbul-lib-coverage': 2.0.6
       collect-v8-coverage: 1.0.2
 
-  '@jest/test-sequencer@26.6.3(ts-node@10.9.2(@types/node@22.14.1)(typescript@4.9.5))':
+  '@jest/test-sequencer@26.6.3':
     dependencies:
       '@jest/test-result': 26.6.2
       graceful-fs: 4.2.11
@@ -7882,11 +7885,7 @@ snapshots:
       jest-runner: 26.6.3(ts-node@10.9.2(@types/node@22.14.1)(typescript@4.9.5))
       jest-runtime: 26.6.3(ts-node@10.9.2(@types/node@22.14.1)(typescript@4.9.5))
     transitivePeerDependencies:
-      - bufferutil
-      - canvas
       - supports-color
-      - ts-node
-      - utf-8-validate
 
   '@jest/test-sequencer@27.5.1':
     dependencies:
@@ -11630,7 +11629,7 @@ snapshots:
   jest-config@26.6.3(ts-node@10.9.2(@types/node@22.14.1)(typescript@4.9.5)):
     dependencies:
       '@babel/core': 7.26.10
-      '@jest/test-sequencer': 26.6.3(ts-node@10.9.2(@types/node@22.14.1)(typescript@4.9.5))
+      '@jest/test-sequencer': 26.6.3
       '@jest/types': 26.6.2
       babel-jest: 26.6.3(@babel/core@7.26.10)
       chalk: 4.1.2
@@ -13909,7 +13908,7 @@ snapshots:
     dependencies:
       find-up: 4.1.0
 
-  pnpm@10.8.1: {}
+  pnpm@9.15.9: {}
 
   posix-character-classes@0.1.1: {}
 
