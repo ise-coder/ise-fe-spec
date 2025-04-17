@@ -13,7 +13,7 @@
 | 规范 | Lint 工具 | npm 包 |
 | ---- | ---- | ---- |
 | 文档规范 | [markdownlint](https://github.com/DavidAnson/markdownlint) | [ise-fe-markdownlint-config](https://www.npmjs.com/package/ise-fe-markdownlint-config) |
-| Git 规范 | [commitlint](https://commitlint.js.org/) | [ise-fe-commitlint-config](https://www.npmjs.com/package/ise-fe-commitlint-config) |
+| Git 规范 | [commitlint](https://commitlint.js.org/) | [commitlint-config-ise](https://www.npmjs.com/package/commitlint-config-ise) |
 | CSS 规范 | [stylelint](https://stylelint.io/) | [ise-fe-stylelint-config](https://www.npmjs.com/package/ise-fe-stylelint-config) |
 | JS/TS/Node 规范 | [ESLint](https://eslint.org/docs/v8.x) | [eslint-config-ise](https://www.npmjs.com/package/eslint-config-ise) |
 
@@ -41,11 +41,11 @@ npm install ise-fe-lint -g
 
 具体会做以下事情：
 
-- 安装各种依赖：包括 `Linter` 依赖，如 [ESLint](https://eslint.org/)、[stylelint](https://stylelint.io/)、[commitlint](https://commitlint.js.org/#/)、[markdownlint](https://github.com/DavidAnson/markdownlint) 等；配置依赖，如 [ise-fe-commitlint-config](https://www.npmjs.com/package/ise-fe-commitlint-config)、[ise-fe-markdownlint-config](https://www.npmjs.com/package/ise-fe-markdownlint-config)、[ise-fe-stylelint-config](https://www.npmjs.com/package/ise-fe-stylelint-config) 、[eslint-config-ise](https://www.npmjs.com/package/eslint-config-ise)等
+- 安装各种依赖：包括 `Linter` 依赖，如 [ESLint](https://eslint.org/)、[stylelint](https://stylelint.io/)、[commitlint](https://commitlint.js.org/#/)、[markdownlint](https://github.com/DavidAnson/markdownlint) 等；配置依赖，如 [commitlint-config-ise](https://www.npmjs.com/package/commitlint-config-ise)、[ise-fe-markdownlint-config](https://www.npmjs.com/package/ise-fe-markdownlint-config)、[ise-fe-stylelint-config](https://www.npmjs.com/package/ise-fe-stylelint-config) 、[eslint-config-ise](https://www.npmjs.com/package/eslint-config-ise)等
 - 写入各种配置文件，包括：
   - `.eslintrc.js`、`.eslintignore`：ESLint 配置（继承 `eslint-config-ise`）及白名单文件
   - `.stylelintrc.js`、`.stylelintignore`：stylelint 配置（继承 `ise-fe-stylelint-config`）及白名单文件
-  - `commitlint.config.js`：commitlint 配置（继承 `ise-fe-commitlint-config`）
+  - `commitlint.config.js`：commitlint 配置（继承 `commitlint-config-ise`）
   - `.markdownlint.json`、`.markdownlintignore`：`markdownlint` 配置及白名单文件
   - `.prettierrc.js`：符合规范的 [Prettier 配置](https://prettier.io/docs/en/configuration.html)
   - `.editorconfig`：符合规范的 [editorconfig](https://editorconfig.org/)

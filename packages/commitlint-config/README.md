@@ -1,4 +1,4 @@
-# `ise-fe-commitlint-config`
+# `commitlint-config-ise`
 
 > ISE Git 规范
 
@@ -9,7 +9,7 @@
 使用时，需要安装 [@commitlint/cli](https://www.npmjs.com/package/@commitlint/cli)：
 
 ```bash
-npm install ise-fe-commitlint-config @commitlint/cli --save-dev
+npm install commitlint-config-ise @commitlint/cli --save-dev
 ```
 
 ## 使用
@@ -18,7 +18,7 @@ npm install ise-fe-commitlint-config @commitlint/cli --save-dev
 
 ```javascript
 module.exports = {
-  extends: ['ise-fe-commitlint-config'],
+  extends: ['commitlint-config-ise'],
 };
 ```
 

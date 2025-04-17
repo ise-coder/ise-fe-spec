@@ -1,6 +1,6 @@
 {
   "name": "ise-fe-lint",
-  "version": "1.7.11",
+  "version": "1.7.12",
   "description": "ISE 前端编码规范工程化标准脚手架",
   "bin": "./lib/cli.js",
   "main": "./lib/index.js",
@@ -83,7 +83,7 @@
     "glob": "^7.1.6",
     "inquirer": "^7.3.3",
     "is-docker": "^2.1.1",
-    "ise-fe-commitlint-config": "workspace:*",
+    "commitlint-config-ise": "workspace:*",
     "ise-fe-markdownlint-config": "workspace:*",
     "ise-fe-stylelint-config": "workspace:*",
     "lodash": "^4.17.20",
