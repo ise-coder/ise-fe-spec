@@ -120,6 +120,10 @@ export default async (options: InitOptions) => {
     config.enablePrettier = await chooseEnablePrettier();
   }
 
+  log.info(`Step ${++step}. 写入配置文件`);
+  generateTemplate(cwd, config);
+  log.success(`Step ${step}. 写入配置文件成功 :D`);
+
   if (!isTest) {
     log.info(`Step ${++step}. 检查并处理项目中可能存在的依赖和配置冲突`);
     pkg = await conflictResolve(cwd, options.rewriteConfig);
@@ -158,10 +162,6 @@ export default async (options: InitOptions) => {
       log.error(`Step ${step}. 配置 git commit 卡点失败 :D`);
     }
   }
-
-  log.info(`Step ${++step}. 写入配置文件`);
-  generateTemplate(cwd, config);
-  log.success(`Step ${step}. 写入配置文件成功 :D`);
 
   // 完成信息
   const logs = [`${PKG_NAME} 初始化完成 :D`].join('\r\n');
