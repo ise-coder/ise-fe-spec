@@ -10,7 +10,8 @@
     "build": "rm -rf lib && npm run copyfiles && tsc",
     "test": "npm run build && jest",
     "coverage": "nyc jest --silent --forceExit",
-    "prepublishOnly": "npm run test"
+    "prepublishOnly": "npm run test",
+    "prepare": "husky"
   },
   "keywords": [
     "ise",
