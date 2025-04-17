@@ -129,9 +129,13 @@ const initProgram = () => {
       // 获取当前目录下的提交信息文件路径，这里假设提交信息文件在项目根目录，实际需根据情况调整
       const commitMsgFilePath = path.join(process.cwd(), '.git/COMMIT_EDITMSG');
 
-      const result = spawn.sync('npx', ['commitlint', '--edit', commitMsgFilePath], {
-        stdio: 'inherit',
-      });
+      const result = spawn.sync(
+        'npx',
+        ['--no-install', 'commitlint', '--edit', commitMsgFilePath],
+        {
+          stdio: 'inherit',
+        },
+      );
 
       if (result.status !== 0) {
         process.exit(result.status);

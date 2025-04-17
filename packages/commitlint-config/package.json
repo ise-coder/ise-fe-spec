@@ -1,6 +1,6 @@
 {
   "name": "ise-fe-commitlint-config",
-  "version": "1.7.3",
+  "version": "1.7.4",
   "description": "ISE Git规范",
   "keywords": [
     "ise",
@@ -22,7 +22,7 @@
     "url": "https://github.com/ise-coder/ise-fe-spec/issues"
   },
   "dependencies": {
-    "@commitlint/cli": "^19.0.0",
-    "@commitlint/config-conventional": "^19.8.0"
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0"
   }
 }
