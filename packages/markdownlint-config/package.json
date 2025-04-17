@@ -1,6 +1,6 @@
 {
   "name": "ise-fe-markdownlint-config",
-  "version": "1.7.5",
+  "version": "1.7.6",
   "description": "ISE 文档规范",
   "keywords": [
     "ise",
@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/ise-coder/ise-fe-spec/issues"
   },
-  "dependencies": {
+  "peerDependencies": {
     "markdownlint": "^0.25.1"
   }
 }
