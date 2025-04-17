@@ -1,9 +1,9 @@
 module.exports = {
-  plugins: ['eslint-eslint-ise'],
+  plugins: ['eslint-plugin-ise'],
   rules: {
-    'eslint-eslint-ise/no-http-url': 'warn',
-    'eslint-eslint-ise/no-broad-semantic-versioning': 'error',
-    'eslint-eslint-ise/no-secret-info': 'error',
-    'eslint-eslint-ise/no-js-in-ts-project': 'warn',
+    'eslint-plugin-ise/no-http-url': 'warn',
+    'eslint-plugin-ise/no-broad-semantic-versioning': 'error',
+    'eslint-plugin-ise/no-secret-info': 'error',
+    'eslint-plugin-ise/no-js-in-ts-project': 'warn',
   },
 };

@@ -1,4 +1,4 @@
-# eslint-eslint-ise
+# eslint-plugin-ise
 
 > ISE 自定义 eslint 插件
 
@@ -7,7 +7,7 @@
 除了本包，你需要同时安装 [ESlint](https://eslint.org/)
 
 ``` bash
-npm install eslint-eslint-ise eslint --save-dev
+npm install eslint-plugin-ise eslint --save-dev
 ```
 
 ## 使用
@@ -19,8 +19,8 @@ npm install eslint-eslint-ise eslint --save-dev
 module.exports = {
   plugin: ['ise-eslint-config'],
   rules: {
-    'eslint-eslint-ise/no-http-url': 'warn',
-    'eslint-eslint-ise/no-secret-info': 'error',
+    'eslint-plugin-ise/no-http-url': 'warn',
+    'eslint-plugin-ise/no-secret-info': 'error',
   },
 };
 ```
@@ -30,7 +30,7 @@ module.exports = {
 ```js
 // .eslintrc.js
 module.exports = {
-  extends: 'plugin:eslint-eslint-ise/recommended',
+  extends: 'plugin:eslint-plugin-ise/recommended',
 };
 ```
 
