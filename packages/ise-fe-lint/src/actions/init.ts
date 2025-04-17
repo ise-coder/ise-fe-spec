@@ -2,6 +2,7 @@ import path from 'path';
 import fs from 'fs-extra';
 import inquirer from 'inquirer';
 import spawn from 'cross-spawn';
+import { execSync } from 'child_process';
 import update from './update';
 import npmType from '../utils/npm-type';
 import log from '../utils/log';
@@ -130,6 +131,28 @@ export default async (options: InitOptions) => {
       spawn.sync(npm, ['i', '-D', PKG_NAME], { stdio: 'inherit', cwd });
       log.success(`Step ${step}. 安装依赖成功 :D`);
     }
+  }
+
+  // 配置 commit 卡点
+  log.info(`Step ${++step}. 配置 git commit 卡点`);
+  try {
+    const npm = await npmType;
+    // 安装 husky 及配置 husky commit-msg 钩子
+    execSync(`${npm} install -D husky@9.1.7`, { encoding: 'utf8' });
+    execSync('npx husky init', { encoding: 'utf8' });
+    execSync(`echo 'npx ${PKG_NAME} commit-msg-scan' > .husky/commit-msg`, {
+      encoding: 'utf8',
+    });
+    execSync('chmod +x .husky/commit-msg', { encoding: 'utf8' });
+
+    // 配置 husky pre-commit 钩子
+    execSync(`echo 'npx ${PKG_NAME} commit-file-scan' > .husky/pre-commit`, {
+      encoding: 'utf8',
+    });
+    execSync('chmod +x .husky/pre-commit', { encoding: 'utf8' });
+    log.success(`Step ${step}. 配置 git commit 卡点成功 :D`);
+  } catch (error) {
+    log.error(`Step ${step}. 配置 git commit 卡点失败 :D`);
   }
 
   log.info(`Step ${++step}. 写入配置文件`);
