@@ -126,7 +126,12 @@ const initProgram = () => {
     .command('commit-msg-scan')
     .description('commit message 检查: git commit 时对 commit message 进行检查')
     .action(() => {
-      const result = spawn.sync('commitlint', ['-E', 'HUSKY_GIT_PARAMS'], { stdio: 'inherit' });
+      // 获取当前目录下的提交信息文件路径，这里假设提交信息文件在项目根目录，实际需根据情况调整
+      const commitMsgFilePath = path.join(process.cwd(), '.git/COMMIT_EDITMSG');
+
+      const result = spawn.sync('npx', ['commitlint', '--edit', commitMsgFilePath], {
+        stdio: 'inherit',
+      });
 
       if (result.status !== 0) {
         process.exit(result.status);

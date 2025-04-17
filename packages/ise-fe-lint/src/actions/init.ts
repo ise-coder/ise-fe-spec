@@ -125,6 +125,11 @@ export default async (options: InitOptions) => {
     pkg = await conflictResolve(cwd, options.rewriteConfig);
     log.success(`Step ${step}. 已完成项目依赖和配置冲突检查处理 :D`);
 
+    // 配置 husky
+    pkg.scripts.preinstall = 'npx only-allow pnpm';
+    pkg.scripts.prepare = 'husky';
+    fs.writeFileSync(path.resolve(cwd, 'package.json'), JSON.stringify(pkg, null, 2), 'utf8');
+
     if (!disableNpmInstall) {
       log.info(`Step ${++step}. 安装依赖`);
       const npm = await npmType;
@@ -137,8 +142,7 @@ export default async (options: InitOptions) => {
   log.info(`Step ${++step}. 配置 git commit 卡点`);
   try {
     const npm = await npmType;
-    // 安装 husky 及配置 husky commit-msg 钩子
-    execSync(`${npm} install -D husky@9.1.7`, { encoding: 'utf8' });
+    // 预先安装 husky 及配置 husky commit-msg 钩子
     execSync('npx husky init', { encoding: 'utf8' });
     execSync(`echo 'npx ${PKG_NAME} commit-msg-scan' > .husky/commit-msg`, {
       encoding: 'utf8',
